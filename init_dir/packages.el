@@ -85,6 +85,9 @@
   ;;      zb zd zf zg zk zm zp zs zw zx
 )
 
+(use-package gruvbox-theme
+  :ensure t)
+
 (use-package expand-region
 ;;  :init
 ;;  (global-set-key (kbd "C-=") 'er/expand-region)
