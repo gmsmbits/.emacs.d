@@ -40,6 +40,12 @@
     (setq vc-handled-backends nil)
     ))
 
+(use-package exec-path-from-shell ;; for fresh Git to work in Magit
+  :ensure t
+  :init
+     (when (memq window-system '(mac ns))
+       (exec-path-from-shell-initialize))
+)
 
 (use-package browse-kill-ring
   :ensure t
