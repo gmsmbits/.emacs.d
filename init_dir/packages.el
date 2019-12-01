@@ -14,6 +14,12 @@
 (require 'use-package)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Smex
+(use-package smex
+  :init (smex-initialize)
+  :bind ("M-x" . smex))
+
+
 (use-package plantuml-mode
   :ensure t
   :config
