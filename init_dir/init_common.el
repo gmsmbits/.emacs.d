@@ -35,10 +35,6 @@
   (not (member major-mode my-electic-pair-modes)))
 (setq electric-pair-inhibit-predicate #'my-inhibit-electric-pair-mode)
 
-;; Smex
-(use-package smex
-  :init (smex-initialize)
-  :bind ("M-x" . smex))
 
 ;; IDO mode
 (setq ido-enable-flex-matching t)

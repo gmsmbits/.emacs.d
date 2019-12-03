@@ -17,6 +17,7 @@
 ;; Smex
 (use-package smex
   :init (smex-initialize)
+  :ensure t
   :bind ("M-x" . smex))
 
 
