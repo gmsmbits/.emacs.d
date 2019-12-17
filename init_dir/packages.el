@@ -149,6 +149,7 @@
     ;;  -v : Do natural sort .. so the file names starting with . will show up first.
     ;;  -F : Classify filenames by appending '*' to executables,
     ;;       '/' to directories, etc.
+    (setq insert-directory-program "gls")
     (setq dired-listing-switches "-alGhvF --group-directories-first"))) ; default: "-al"
 
     (defun modi/dired-rename-buffer-name ()
