@@ -14,6 +14,12 @@
 (require 'use-package)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Anzu (isearch results count)
+(use-package anzu
+  :init (global-anzu-mode +1)
+  :ensure t
+  )
+
 ;; Smex
 (use-package smex
   :init (smex-initialize)
@@ -150,7 +156,8 @@
     ;;  -F : Classify filenames by appending '*' to executables,
     ;;       '/' to directories, etc.
     (setq insert-directory-program "gls")
-    (setq dired-listing-switches "-alGhvF --group-directories-first"))) ; default: "-al"
+    ;(setq dired-listing-switches "-alGhvF --group-directories-first")
+    )) ; default: "-al"
 
     (defun modi/dired-rename-buffer-name ()
       "Rename the dired buffer name to distinguish it from file buffers. It added extra strings at the front and back of the default dired buffer name."
@@ -163,3 +170,7 @@
 
 ;;    (add-hook 'dired-mode-hook #'modi/dired-rename-buffer-name)
 ;;    (add-hook 'dired-mode-hook #'modi/dired-truncate-lines)
+
+(use-package darktooth-theme
+  :ensure t
+  )
