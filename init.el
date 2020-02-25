@@ -21,7 +21,7 @@
  '(gtypist-mode-hook (quote (man-fg-fix)))
  '(package-selected-packages
    (quote
-    (lsp-ui company-lsp ccls darktooth-theme anzu magit browse-kill-ring undo-tree key-chord expand-region ace-jump-mode gruvbox-theme use-package))))
+    (which-key whch-key lsp-ui company-lsp ccls darktooth-theme anzu magit browse-kill-ring undo-tree key-chord expand-region ace-jump-mode gruvbox-theme use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -20,6 +20,20 @@
   :ensure t
   )
 
+(use-package which-key
+  :init (which-key-mode)
+  ;; default
+  ;;(setq which-key-sort-order 'which-key-key-order)
+  ;; same as default, except single characters are sorted alphabetically
+  ;; (setq which-key-sort-order 'which-key-key-order-alpha)
+  ;; same as default, except all prefix keys are grouped together at the end
+  ;; (setq which-key-sort-order 'which-key-prefix-then-key-order)
+  ;; same as default, except all keys from local maps shown first
+  ;; (setq which-key-sort-order 'which-key-local-then-key-order)
+  ;; sort based on the key description ignoring case
+  (setq which-key-sort-order 'which-key-description-order)
+  )
+
 ;; Smex
 (use-package smex
   :init (smex-initialize)
