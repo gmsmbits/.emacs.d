@@ -5,6 +5,8 @@
 (setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
 
 (setq locale-coding-system 'utf-8)
+(setq mac-command-modifier 'meta)
+
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
