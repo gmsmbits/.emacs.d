@@ -21,6 +21,7 @@
   )
 
 (use-package which-key
+  :ensure t
   :init (which-key-mode)
   ;; default
   ;;(setq which-key-sort-order 'which-key-key-order)
