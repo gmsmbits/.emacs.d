@@ -5,6 +5,7 @@
 (load "~/.emacs.d/init_dir/init_common.el")
 (load "~/.emacs.d/init_dir/custom_funs.el")
 (load "~/.emacs.d/init_dir/packages.el")
+(load "~/.emacs.d/init_dir/ideish.el")
 
 
 
@@ -20,7 +21,7 @@
  '(gtypist-mode-hook (quote (man-fg-fix)))
  '(package-selected-packages
    (quote
-    (company-lsp ccls darktooth-theme anzu magit browse-kill-ring undo-tree key-chord expand-region ace-jump-mode gruvbox-theme use-package))))
+    (which-key whch-key lsp-ui company-lsp ccls darktooth-theme anzu magit browse-kill-ring undo-tree key-chord expand-region ace-jump-mode gruvbox-theme use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
