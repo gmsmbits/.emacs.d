@@ -1,6 +1,7 @@
 ;;(use-package lsp-mode :commands lsp :ensure t)
 (use-package lsp-mode
-  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  :ensure t
+ ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   :init (setq lsp-keymap-prefix "C-c l")
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
          (cc-mode . lsp)
