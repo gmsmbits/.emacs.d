@@ -70,8 +70,11 @@
 
 (add-hook 'dired-mode-hook
 	  (lambda ()
-	  (define-key dired-mode-map (kbd "^")
-	    (lambda () (interactive) (find-alternate-file "..")))
+	    (face-remap-add-relative 'default '(:family "Monospace"))
+	    (dired-hide-details-mode 1)
+	    (define-key dired-mode-map (kbd "^")
+	      (lambda () (interactive) (find-alternate-file "..")))
 	; was dired-up-directory
-	  ))
+	    )
+	  )
 
