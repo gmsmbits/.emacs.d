@@ -46,14 +46,14 @@
 ;;which-key-command-description-face,   Commands not in local-map,     :inherit font-lock-function-name-face                    
 ;;which-key-local-map-description-face, Commands in local-map,         :inherit which-key-command-description-face              
 
-  (setq which-key-sort-order 'which-key-description-order)
-  (set-face-attribute 'which-key-key-face nil  :family "Monospace" :font "Hack")
-  (set-face-attribute 'which-key-separator-face nil :family "Monospace" :font "Hack")
-;;  (set-face-attribute 'which-key-note-face nil :family "Monospace" :font "Hack")
-;;  (set-face-attribute 'which-key-special-key-face nil :family "Monospace" :font "Hack")
-  (set-face-attribute 'which-key-group-description-face nil :family "Monospace" :font "Hack")
-  (set-face-attribute 'which-key-command-description-face nil :family "Monospace" :font "Hack")
-;;  (set-face-attribute 'which-key-local-map-description-face nil :family "Monospace" :font "Hack")
+;;  (setq which-key-sort-order 'which-key-description-order)
+;;  (set-face-attribute 'which-key-key-face nil  :family "Monospace")
+;;  (set-face-attribute 'which-key-separator-face nil :family "Monospace")
+;;;;  (set-face-attribute 'which-key-note-face nil :family "Monospace" :font "Hack")
+;;;;  (set-face-attribute 'which-key-special-key-face nil :family "Monospace" :font "Hack")
+;;  (set-face-attribute 'which-key-group-description-face nil :family "Monospace")
+;;  (set-face-attribute 'which-key-command-description-face nil :family "Monospace")
+;;;;  (set-face-attribute 'which-key-local-map-description-face nil :family "Monospace" :font "Hack")
   )
 
 ;; Smex
