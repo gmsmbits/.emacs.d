@@ -14,6 +14,11 @@
 (require 'use-package)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(use-package cmake-mode
+  :ensure t
+  :init (cmake-mode)
+  )
+
 ;; Anzu (isearch results count)
 (use-package anzu
   :init (global-anzu-mode +1)
