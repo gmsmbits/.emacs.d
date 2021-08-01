@@ -32,7 +32,23 @@
   ;; same as default, except all keys from local maps shown first
   ;; (setq which-key-sort-order 'which-key-local-then-key-order)
   ;; sort based on the key description ignoring case
+;;  Face	Applied To	Default Definition
+;;which-key-key-face,                   Every key sequence,            :inherit font-lock-constant-face                         
+;;which-key-separator-face,             The separator (→),             :inherit font-lock-comment-face                          
+;;which-key-note-face,                  Hints and notes,               :inherit which-key-separator-face                        
+;;which-key-special-key-face,           User-defined special keys,     :inherit which-key-key-face :inverse-video t :weight bold
+;;which-key-group-description-face,     Command groups (i.e, keymaps), :inherit font-lock-keyword-face                          
+;;which-key-command-description-face,   Commands not in local-map,     :inherit font-lock-function-name-face                    
+;;which-key-local-map-description-face, Commands in local-map,         :inherit which-key-command-description-face              
+
   (setq which-key-sort-order 'which-key-description-order)
+  (set-face-attribute 'which-key-key-face nil  :family "Monospace" :font "Hack")
+  (set-face-attribute 'which-key-separator-face nil :family "Monospace" :font "Hack")
+;;  (set-face-attribute 'which-key-note-face nil :family "Monospace" :font "Hack")
+;;  (set-face-attribute 'which-key-special-key-face nil :family "Monospace" :font "Hack")
+  (set-face-attribute 'which-key-group-description-face nil :family "Monospace" :font "Hack")
+  (set-face-attribute 'which-key-command-description-face nil :family "Monospace" :font "Hack")
+;;  (set-face-attribute 'which-key-local-map-description-face nil :family "Monospace" :font "Hack")
   )
 
 ;; Smex
