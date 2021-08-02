@@ -32,8 +32,4 @@
 )
 
 (use-package lsp-ui :commands lsp-ui-mode :ensure t)
-(use-package company-lsp
-  :ensure t
-  :commands company-lsp
-  :config (push 'company-lsp company-backends)) ;; add company-lsp as a backend
 
