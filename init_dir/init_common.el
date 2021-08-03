@@ -79,3 +79,20 @@
 	    )
 	  )
 
+(add-hook 'which-key-mode-hook
+	  (lambda ()
+;;	    (face-remap-add-relative 'which-key-key-face '(:family "Monospace"))
+;;	    (face-remap-add-relative 'which-key-separator-face '(:family "Monospace"))
+;;	    (face-remap-add-relative 'which-key-group-description-face '(:family "Monospace"))
+;;	    (face-remap-add-relative 'which-key-command-description-face '(:family "Monospace"))
+;;	    (face-remap-add-relative 'which-key-command-description-face '(:family "Hack"))
+;;	    (face-remap-add-relative 'default '(fixed-pitch))
+	   (face-remap-add-relative 'default '(:family "Monospace")) 
+	    )
+	  )
+
+(add-hook 'ibuffer-mode-hook
+	  (lambda ()
+	    (face-remap-add-relative 'default '(:family "Monospace"))
+	    )
+	  )
