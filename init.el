@@ -59,7 +59,7 @@
        (mode . gnus-article-mode))))))
  '(package-selected-packages
    (quote
-    (cmake-mode amx which-key whch-key lsp-ui company-lsp ccls darktooth-theme anzu magit browse-kill-ring undo-tree key-chord expand-region ace-jump-mode gruvbox-theme use-package))))
+    (cmake-mode amx whch-key lsp-ui company-lsp ccls darktooth-theme anzu magit browse-kill-ring undo-tree key-chord expand-region ace-jump-mode gruvbox-theme use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
