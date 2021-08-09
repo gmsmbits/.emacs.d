@@ -22,9 +22,10 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-(set-fontset-font "fontset-default" 'cyrillic "DejaVu Sans Mono")
 
-(set-fontset-font t 'cyrillic (font-spec :script 'cyrillic) nil 'append)
+;; set-fontset-font seems to be deprecated
+;;(set-fontset-font "fontset-default" 'cyrillic "DejaVu Sans Mono")
+;;(set-fontset-font t 'cyrillic (font-spec :script 'cyrillic) nil 'append)
 
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
