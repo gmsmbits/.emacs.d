@@ -14,6 +14,11 @@
 (require 'use-package)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+(use-package dired-subtree
+  :ensure t
+  )
+
 (use-package cmake-mode
   :ensure t
   :init (cmake-mode)

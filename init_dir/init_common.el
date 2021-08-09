@@ -12,11 +12,6 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(global-set-key (kbd "C-?") 'help-command)
-;;(global-set-key (kbd "M-?") 'mark-paragraph) ;given to xref-find-references
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "M-h") 'backward-kill-word)
-(global-set-key (kbd "M-z") 'zap-up-to-char)
 
 ;; Gtypist mode
 (autoload 'gtypist-mode "~/.emacs.d/gtypist-mode.el")
@@ -81,6 +76,7 @@
 
 (add-hook 'which-key-mode-hook
 	  (lambda ()
+	    (print "ololo")
 ;;	    (face-remap-add-relative 'which-key-key-face '(:family "Monospace"))
 ;;	    (face-remap-add-relative 'which-key-separator-face '(:family "Monospace"))
 ;;	    (face-remap-add-relative 'which-key-group-description-face '(:family "Monospace"))
@@ -91,8 +87,8 @@
 	    )
 	  )
 
-(add-hook 'ibuffer-mode-hook
-	  (lambda ()
-	    (face-remap-add-relative 'default '(:family "Monospace"))
-	    )
-	  )
+;;(add-hook 'ibuffer-mode-hook
+;;	  (lambda ()
+;;	    (face-remap-add-relative 'default '(:family "Monospace"))
+;;	    )
+;;	  )

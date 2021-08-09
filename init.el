@@ -1,3 +1,52 @@
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file 'noerror)
+(setq confirm-kill-emacs 'yes-or-no-p)
+
+;; reduce the frequency of garbage collection by making it happen on
+;; each 50MB of allocated data (the default is on every 0.76MB)
+(setq gc-cons-threshold 50000000)
+
+;; warn when opening files bigger than 100MB
+(setq large-file-warning-threshold 100000000)
+
+;; quit Emacs directly even if there are running processes
+(setq confirm-kill-processes nil)
+
+;; delete the selection with a keypress
+(delete-selection-mode t)
+
+;; revert buffers automatically when underlying files are changed externally
+(global-auto-revert-mode t)
+
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-fontset-font "fontset-default" 'cyrillic "DejaVu Sans Mono")
+
+(set-fontset-font t 'cyrillic (font-spec :script 'cyrillic) nil 'append)
+
+;; smart tab behavior - indent or complete
+(setq tab-always-indent 'complete)
+
+(define-key global-map [(meta i)] ctl-x-map)
+(define-key global-map (kbd "C-z") #'list-buffers)
+(define-key global-map (kbd "M-z") #'other-window)
+(define-key global-map (kbd "M-(") #'delete-other-windows)
+(define-key global-map (kbd "M-*") #'delete-window)
+(define-key global-map (kbd "M-/") #'undo-tree-visualize)
+;;(define-key global-map (kbd "M-?") #')
+;;(global-set-key (kbd "C-?") 'help-command)
+;;(global-set-key (kbd "M-?") 'mark-paragraph) ;given to xref-find-references
+(global-set-key (kbd "C-h") 'delete-backward-char)
+(global-set-key (kbd "M-h") 'backward-kill-word)
+
+
+
+(set-face-attribute 'default nil :font "Hack-17" :background "#262626" :foreground "lightyellow3")
+(set-face-attribute 'fixed-pitch nil :family "Hack" :height 1.0)
+(set-face-attribute 'variable-pitch nil :family "Default" :height 1.0)
+
 (if (display-graphic-p)
     (load "~/.emacs.d/init_dir/init_graphics.el")
   (load "~/.emacs.d/init_dir/init_terminal.el"))
@@ -8,71 +57,8 @@
 (load "~/.emacs.d/init_dir/ideish.el")
 
 
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("88049c35e4a6cedd4437ff6b093230b687d8a1fb65408ef17bfcf9b7338734f6" "cd4d1a0656fee24dc062b997f54d6f9b7da8f6dc8053ac858f15820f9a04a679" default)))
- '(gtypist-mode-hook (quote (man-fg-fix)))
- '(ibuffer-saved-filter-groups nil)
- '(ibuffer-saved-filters
-   (quote
-    (("cc"
-      (used-mode . c-mode))
-     ("programming"
-      (or
-       (derived-mode . prog-mode)
-       (mode . ess-mode)
-       (mode . compilation-mode)))
-     ("text document"
-      (and
-       (derived-mode . text-mode)
-       (not
-	(starred-name))))
-     ("TeX"
-      (or
-       (derived-mode . tex-mode)
-       (mode . latex-mode)
-       (mode . context-mode)
-       (mode . ams-tex-mode)
-       (mode . bibtex-mode)))
-     ("web"
-      (or
-       (derived-mode . sgml-mode)
-       (derived-mode . css-mode)
-       (mode . javascript-mode)
-       (mode . js2-mode)
-       (mode . scss-mode)
-       (derived-mode . haml-mode)
-       (mode . sass-mode)))
-     ("gnus"
-      (or
-       (mode . message-mode)
-       (mode . mail-mode)
-       (mode . gnus-group-mode)
-       (mode . gnus-summary-mode)
-       (mode . gnus-article-mode))))))
- '(package-selected-packages
-   (quote
-    (cmake-mode amx whch-key lsp-ui company-lsp ccls darktooth-theme anzu magit browse-kill-ring undo-tree key-chord expand-region ace-jump-mode gruvbox-theme use-package))))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#262626" :foreground "lightyellow3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 170 :width normal :foundry "default" :family "Hack")))))
-
-;; fix for macos ls lacks of --dired unless 'brew install coreutils'
-;; (when (eq system-type 'darwin)
-;;   (require 'ls-lisp)
-;;   (setq ls-lisp-use-insert-directory-program nil))
-
+;;(toggle-frame-maximized)
+(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
 (load-theme 'gruvbox t)
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'upcase-region 'disabled nil)
