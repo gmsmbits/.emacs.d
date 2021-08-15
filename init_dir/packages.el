@@ -17,6 +17,9 @@
 
 (use-package dired-subtree
   :ensure t
+  :after dired
+  :bind (:map dired-mode-map
+              ("TAB" . dired-subtree-toggle))
   )
 
 (use-package cmake-mode
@@ -199,8 +202,8 @@
     (when (eq system-type 'darwin)
       (setq insert-directory-program "gls"))
     
-    (setq dired-listing-switches "-alGhvF --group-directories-first")
-    )) ; default: "-al"
+    (setq dired-listing-switches "-alGhvFA --group-directories-first")
+    )) ; default: "-al" -A omits them . and ..
 
     (defun modi/dired-rename-buffer-name ()
       "Rename the dired buffer name to distinguish it from file buffers. It added extra strings at the front and back of the default dired buffer name."

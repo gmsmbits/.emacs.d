@@ -42,7 +42,7 @@
 ;;the second failed attempt to complete.
 (setq compleation-auto-help 'lazy)
 
-(defalias 'list-buffers 'ibuffer) ; make ibuffer default
+
 
 ;;; scrollers
 
@@ -87,8 +87,4 @@
 	    )
 	  )
 
-;;(add-hook 'ibuffer-mode-hook
-;;	  (lambda ()
-;;	    (face-remap-add-relative 'default '(:family "Monospace"))
-;;	    )
-;;	  )
+

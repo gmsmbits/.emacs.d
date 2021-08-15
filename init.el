@@ -30,18 +30,6 @@
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
 
-(define-key global-map [(meta i)] ctl-x-map)
-(define-key global-map (kbd "C-z") #'list-buffers)
-(define-key global-map (kbd "M-z") #'other-window)
-(define-key global-map (kbd "M-(") #'delete-other-windows)
-(define-key global-map (kbd "M-*") #'delete-window)
-(define-key global-map (kbd "M-/") #'undo-tree-visualize)
-;;(define-key global-map (kbd "M-?") #')
-;;(global-set-key (kbd "C-?") 'help-command)
-;;(global-set-key (kbd "M-?") 'mark-paragraph) ;given to xref-find-references
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "M-h") 'backward-kill-word)
-
 
 
 (set-face-attribute 'default nil :font "Hack-17" :background "#262626" :foreground "lightyellow3")
@@ -56,6 +44,8 @@
 (load "~/.emacs.d/init_dir/custom_funs.el")
 (load "~/.emacs.d/init_dir/packages.el")
 (load "~/.emacs.d/init_dir/ideish.el")
+(load "~/.emacs.d/init_dir/ibuffler.el")
+(load "~/.emacs.d/init_dir/keybindings.el")
 
 
 ;;(toggle-frame-maximized)
